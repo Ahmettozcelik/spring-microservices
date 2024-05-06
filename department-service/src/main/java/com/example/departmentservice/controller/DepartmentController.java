@@ -16,7 +16,7 @@ public class DepartmentController {
         this.departmentService = departmentService;
     }
 
-    @PutMapping
+    @PostMapping
     public ResponseEntity<DepartmentDto> saveDepartment(@RequestBody DepartmentDto departmentDto){
         DepartmentDto savedDepartment = departmentService.saveDepartment(departmentDto);
         return new ResponseEntity<>(savedDepartment, HttpStatus.CREATED);
